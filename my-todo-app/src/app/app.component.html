@@ -1,0 +1,18 @@
+<h1>Hello {{ name }}</h1>  
+  <div *ngIf="!isUpdateFormActive">
+  <input type="text" [(ngModel)]="work">
+  <button (click)="save()">Kaydet</button>
+  </div>
+  <div *ngIf="isUpdateFormActive">
+  <input type="text" [(ngModel)]="updateWork">
+  <button (click)="update()">Güncele</button>
+  </div>
+  <hr>
+  <input type="search" [(ngModel)]="search">
+  <ul>
+    <li *ngFor="let t of todos | todoPipe:search let i = index">
+      {{t}}
+      <button (click)="get(i)">Güncelle</button>
+      <button (click)="removeByIndex(i)">Sil</button>
+    </li>    
+  </ul>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: #f1f1f1;
+        }
+
+        nav ul{
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover{
+            font-size: 1.2rem;
+            border-bottom: 1px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Logo</h1>
+        <ul>
+            <li>
+                <a onclick="goHome()">Home</a>
+            </li>
+            <li>
+                <a onclick="goAbout()">About</a>
+            </li>
+            <li>
+                <a onclick="goContact()">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <app-root></app-root>
+
+    <script src="./main.js"></script>
+</body>
+</html>
